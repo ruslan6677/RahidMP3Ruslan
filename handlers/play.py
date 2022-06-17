@@ -147,7 +147,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ Uzun videolar {DURATION_LIMIT} dəqiqəlik icazə verilmir!"
+                f"Bu Mahnının Vaxtı Çox Uzundu {DURATION_LIMIT} dəqiqəlik icazə verilir!"
             )
 
         file_name = get_file_name(audio)
@@ -198,10 +198,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🚀 Support", url=f"https://t.me/Gencler_Mekani"),
-                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Rahid_44"),
+                InlineKeyboardButton("🌐 Kömək", url=f"https://t.me/SecretMMC"),
+                InlineKeyboardButton("📣 Kanal", url=f"https://t.me/SecretMMC"),
             ],[
-                InlineKeyboardButton("📲 Bağla", callback_data="cls"),
+                InlineKeyboardButton("📲 Menyunu Bağla", callback_data="cls"),
             ],
         ]
     )
@@ -221,18 +221,18 @@ async def play(_, message: Message):
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"❌ Uzun videolar {DURATION_LIMIT} dəqiqəlik ucazə verilmir!")
+             await lel.edit(f"Bu Mahnının Vaxtı Çox Uzundu {DURATION_LIMIT} dəqiqəlik icazə verilir!!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🤔 **Dinləmək istədiyin mahnı nədir?**")
-        await lel.edit("🔎 **Zəhmət olmasa Gözləyin...**")
+            return await lel.edit("**Hansı Mahnıya Qulaq Asmaq İstiyirsinizsə /play <Mahnı Adı> ?**")
+        await lel.edit("🔎 **Xaiş Olunur Gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("🔄 **Səsə daxil olunur...🔥**")
+        await lel.edit("**Səsli söhbətə daxil oluram...🤩**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -255,7 +255,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "❌ Mahnı tapılmadı\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil"
+                "Mahnı tapılmadı🙁\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil✅"
             )
             print(str(e))
             return
