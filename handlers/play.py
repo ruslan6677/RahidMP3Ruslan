@@ -94,14 +94,14 @@ async def cls(_, query: CallbackQuery):
 
 # EfsaneMusicVaves düzenlenmiştir.
 
-@Client.on_message(command(["play", "oynat"]) 
+@Client.on_message(command(["play"]) 
                    & filters.group
                    & ~filters.edited 
                    & ~filters.forwarded
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Zəhmət olmasa gözləyin...**")
+    lel = await message.reply("🔄 **Sorğu emal olunur... Zəhmət olmasa gözləyin!**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Rahid_Asistan"
+        user.first_name = "LegendAsistant"
     usar = user
     wew = usar.id
     try:
