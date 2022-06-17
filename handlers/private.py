@@ -27,7 +27,7 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "💡 Əmrlər" , callback_data= "cbbilgi"
+                        "💡 Əmrlər" , callback_data= "cbhelp"
                     ),
                     InlineKeyboardButton(
                         "🇦🇿Rəsmi Group", url=f"https://t.me/SecretMMC"
@@ -53,7 +53,7 @@ async def bilgi(_, message: Message):
                          "✅ Admin əmrləri", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
-                         "Geri 🔄", callback_data="cbstart")
+                         "Geri 🔄", callback_data="start")
                  ],[
                      InlineKeyboardButton(
                          "🧔🏻Sahib", url="https://t.me/o2o_GenCeLi")
@@ -63,7 +63,7 @@ async def bilgi(_, message: Message):
     )
 
 
-@Client.on_callback_query(filters.regex("cbbilgi"))
+@Client.on_callback_query(filters.regex("cbhelp"))
 async def cbbilgi(_, query: CallbackQuery):
     await query.edit_message_text(" Səsli söhbətdə Musiqi oxuması üçün `/play` əmrindən istifadə edə bilərsiniz ⤵️ \n \n Məsələn: \n \n 1. `/play Ayaz Babayev - Sən Mənlə` \n 2. `/play https://youtu.be/qLXUa89Q5WI` \n \n `/alive` - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər. \n \n ⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
     reply_markup=InlineKeyboardMarkup(
@@ -99,7 +99,7 @@ async def herkes(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "️🔄 Geri", callback_data="cbbilgi")
+                         "️🔄 Geri", callback_data="cbhelp")
                  ] 
              ]
          )
@@ -117,7 +117,7 @@ async def admin(_, query: CallbackQuery):
                  ],
                  [
                      InlineKeyboardButton(
-                         "️🔄 Geri", callback_data="cbbilgi")
+                         "️🔄 Geri", callback_data="cbhelp")
                  ] 
              ]
          )
@@ -126,7 +126,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**👋🏻Salam {message.from_user.mention} 🎵 \n Mənim adım {bot}! \n \n ℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam \n \n ✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin \n \n 🧔🏻Sahibim  [Owner](https://t.me/o2o_GenCeLi)**"""),
+    await query.edit_message_text(f"""**👋🏻Salam {message.from_user.mention} 🎵 \n Mənim adım {bot}! \n \n ℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam \n \n ✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin \n \n 🧔🏻Sahibim  [Owner](https://t.me/o2o_GenCeLi)**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -144,7 +144,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "💡 Əmrlər", callback_data= "cbbilgi"
+                        "💡 Əmrlər", callback_data= "cbhelp"
                     ),
                     InlineKeyboardButton(
                         "🇦🇿Rəsmi Group", url=f"https://t.me/SecretMMC"
