@@ -16,29 +16,29 @@ from pytgcalls.types.input_stream import InputStream
 
 ACTV_CALLS = []
 
-@Client.on_message(command(["Dayandırıldı", "pause"]) & other_filters)
+@Client.on_message(command(["pause"]) & other_filters)
 @errors
 @authorized_users_only
 async def durdur(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
-    a = await message.reply_text("▶️ **Musiqi Dayandırıldı!**\n\n• Musiqi İşlətməyə davam etmək üçün **komut » davam**")
+    a = await message.reply_text("▶️ **🎧 Voicechat Paused by**")
     await sleep(3)
     await a.delete()
     
 
 
-@Client.on_message(command(["davam", "resume"]) & other_filters)
+@Client.on_message(command(["resume"]) & other_filters)
 @errors
 @authorized_users_only
 async def devam(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
-    a = await message.reply_text("⏸ **Musiqi davam edilir*\n\n• Musiqini dayandırmaq üçün **komut » Dayandır**")
+    a = await message.reply_text("⏸ **🎧 Voicechat Paused by**")
     await sleep(3)
     await a.delete()
     
 
 
-@Client.on_message(command(["son", "end"]) & other_filters)
+@Client.on_message(command(["end"]) & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -46,7 +46,7 @@ async def stop(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("🙄 **Hal-hazırda musiqi oxunmur**")
+        await message.reply_text("**Bot səsli söhbətdə yayımlanmır.**")
     else:
         try:
             queues.clear(chat_id)
@@ -55,9 +55,9 @@ async def stop(_, message: Message):
         await callsmusic.pytgcalls.leave_group_call(chat_id)
         await _.send_message(
             message.chat.id,
-            "✅ **Musiqi dayandırıldı\n\n• Asistan səsli söhbət bağlantısı kəsildi !**")
+            "**🎧 Səsli söhbət bitdi/dayandırıldı!**")
     
-@Client.on_message(command(["atla", "skip"]) & other_filters)
+@Client.on_message(command(["skip"]) & other_filters)
 @errors
 @authorized_users_only
 async def atla(_, message: Message):
@@ -84,7 +84,7 @@ async def atla(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("➡️ **Mahnı 💫 yan keçdi.**")
+        a = await message.reply_text("➡️ **Sıradaki Mahniya Geçid Edildi.**")
         await sleep(3)
         await a.delete()
 
