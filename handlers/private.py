@@ -40,7 +40,7 @@ async def start(_, message: Message):
   
 
 
-@Client.on_message(command(["bilgi", f"bilgi@{BOT_USERNAME}"]))
+@Client.on_message(command(["help", f"bilgi@{BOT_USERNAME}"]))
 async def bilgi(_, message: Message):
       await message.reply_text(" Səsli söhbətdə Musiqi oxuması üçün `/play` əmrindən istifadə edə bilərsiniz ⤵️ \n \n Məsələn: \n \n 1. `/play Ayaz Babayev - Sən Mənlə` \n 2. `/play https://youtu.be/qLXUa89Q5WI` \n \n `/alive` - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər. \n \n ⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
       reply_markup=InlineKeyboardMarkup(
@@ -78,7 +78,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🔄 Geri", callback_data="cbstart")
+            "🔄 Geri", callback_data="start")
         ],
         [
           InlineKeyboardButton(
