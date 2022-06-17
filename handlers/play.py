@@ -121,24 +121,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Əvvəlcə məni admin edin!</b>")
+                        "<b>Məni əvvəlcə admin edin və sora /reload yazın!</b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Salam Asistan bu qrupa musiqi oxumaq üçün qoşuldu**")
+                        message.chat.id, "**Assistant Account[𝗟𝗲𝗴𝗲𝗻𝗱 𝗔𝘀𝗶𝘀𝘁𝗮𝗻𝘁] Uğurla Qoşuldu.\n\nİndi Musiqi Başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🔵 Taşan Gözləmə xətası 🔵</b> \n\Salam {user.first_name}, Faydalı userbot çoxlu qoşulma sorğularına görə qrupunuza qoşula bilmədi. Userbot-un qrupda qadağan edilmədiyinə əmin olun və sonra yenidən cəhd edin!")
+                        f"<b>Assistent qrupunuzda və ya kanalınızda qadağan edilib, lütfən, qadağanı ləğv edin.\n\nKöməkçi İstifadəçi adı: @LegendAsistant\nKöməkçi ID: `5342770432` !")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>Salam {user.first_name}, Faydalı userbot bu söhbətdə deyil admindən göndərməyi xahiş edin /play ilk dəfə əlavə etmək üçün əmri.</i>")
+            f"<iiAssistent qrupunuzda və ya kanalınızda qadağan edilib, lütfən, qadağanı ləğv edin.\n\nKöməkçi İstifadəçi adı: @LegendAsistant\nKöməkçi ID: `5342770432` !.")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
