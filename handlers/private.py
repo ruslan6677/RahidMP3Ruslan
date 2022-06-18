@@ -19,7 +19,7 @@ async def start(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧔🏻Sahib", url="https://t.me/o2o_GenCeLi"
+                        "🧔🏻Sahibim", url="https://t.me/o2o_GenCeLi"
                     ),
                     InlineKeyboardButton(
                         "🇦🇿Rəsmi Kanal", url="https://t.me/SecretMMC"
@@ -53,10 +53,10 @@ async def help(_, message: Message):
                          "✅ Admin əmrləri", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
-                         "Geri 🔄", callback_data="cbstart")
+                         "🔄 Geri Qayıt", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "🧔🏻Sahib", url="https://t.me/o2o_GenCeLi")
+                         "🧔🏻Sahibim", url="https://t.me/o2o_GenCeLi")
                  ]
              ]
          )
@@ -78,11 +78,11 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🔄 Geri", callback_data="start")
+            "🔄 Geri Qayıt", callback_data="cbstart")
         ],
         [
           InlineKeyboardButton(
-            "🧔🏻Sahib", url="https://t.me/o2o_GenCeLi")
+            "🧔🏻Sahibim", url="https://t.me/o2o_GenCeLi")
         ]
       ]
      ))
@@ -95,11 +95,11 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🧔🏻Sahib", url="https://t.me/o2o_GenCeLi")
+                         "🧔🏻Sahibim", url="https://t.me/o2o_GenCeLi")
                  ],
                  [
                      InlineKeyboardButton(
-                         "️🔄 Geri", callback_data="cbhelp")
+                         "️🔄 Geri Qayıt", callback_data="cbhelp")
                  ] 
              ]
          )
@@ -113,11 +113,11 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🧔🏻Sahib", url="https://t.me/o2o_GenCeLi")
+                         "🧔🏻Sahibim", url="https://t.me/o2o_GenCeLi")
                  ],
                  [
                      InlineKeyboardButton(
-                         "️🔄 Geri", callback_data="cbhelp")
+                         "️🔄 Geri Qayıt", callback_data="cbhelp")
                  ] 
              ]
          )
@@ -136,7 +136,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧔🏻Sahib", url="https://t.me/o2o_GenCeLi"
+                        "🧔🏻Sahibim", url="https://t.me/o2o_GenCeLi"
                     ),
                     InlineKeyboardButton(
                         "🇦🇿Rəsmi Kanal", url="https://t.me/SecretMMC"
