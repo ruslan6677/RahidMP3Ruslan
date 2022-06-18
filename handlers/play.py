@@ -127,7 +127,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant Account[𝗟𝗲𝗴𝗲𝗻𝗱 𝗔𝘀𝗶𝘀𝘁𝗮𝗻𝘁] Uğurla Qoşuldu.\n\nİndi Musiqi Başlayır**")
+                        message.chat.id, "**Assistant Account[𝗟 Σ 𝗚 Σ 𝗡 𝗗 ᵃˢⁱˢᵗᵃⁿᵗ] Uğurla Qoşuldu.\n\nİndi Musiqi Başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
