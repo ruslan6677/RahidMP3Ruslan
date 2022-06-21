@@ -118,15 +118,6 @@ async def admin(_, query: CallbackQuery):
                  [
                      InlineKeyboardButton(
                          "️🔄 Geri Qayıt", callback_data="cbhelp")
-                 ] 
-             ]
-         )
-         )
-
-
-@bot.on_message(filters.command("alive") & filters.user(Config.SUDO_USERS))
-async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`Mən Əla İşləyirəm 😎`')
                      ] 
              ]
          )
