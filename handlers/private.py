@@ -74,7 +74,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "",callback_data ="herkes")
+            "✅",callback_data ="herkes")
         ],
         [
           InlineKeyboardButton(
@@ -90,7 +90,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun hərkəs üçün əmr menyusu 😉\n\n/play - Musiqi oxutmaq üçün youtube url'sinə vəya musiqi dosyasına yanıt verin.▶️\n/song  - İstədiyiniz musiqi sürətli bir şəkildə axtarın.🎵\n/vsong - İstədiyiniz videoları sürətli bir şəkildə axtarın.🔍\n\n</b>""",
+    await query.edit_message_text(f"""Əᴛʀᴀғʟı\n\nʙᴏᴛ: [ᴍᴜʟᴛɪᴀᴢʙᴏᴛ](https://t.me/LegendMucisRobot)\n\nᴋᴏᴅʟᴀʏᴀɴ: [ɢᴇɴᴄᴇʟɪ](https://t.me/o2o_GenCeLi)\n\nᴅɪʟ: [ᴘʏᴛʜᴏɴ](https://www.python.org\n\nᴋɪᴛᴀʙxᴀɴᴀ: [ᴘʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/\n\nsᴇʀᴠᴇʀ: [ʜᴇʀᴏᴋᴜ](https://heroku.com/)\n\nᴋᴀɴᴀʟ: [ꜱᴇᴄʀᴇᴛᴍᴍᴄ](https://t.me/SecretMMC)\n\n""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
