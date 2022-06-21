@@ -124,6 +124,15 @@ async def admin(_, query: CallbackQuery):
          )
 
 
+@bot.on_message(filters.command("alive") & filters.user(Config.SUDO_USERS))
+async def live(client: Client, message: Message):
+    livemsg = await message.reply_text('`Mən Əla İşləyirəm 😎`')
+                     ] 
+             ]
+         )
+         )
+
+
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(f"""**👋🏻Salam {query.from_user.mention} 🎵 \n Mənim adım {bot}! \n \n ℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam \n \n ✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin \n \n 🧔🏻Sahibim [𝐆Ξ𝐍𝐂Ξ𝐋𝐈🥃🧊](https://t.me/o2o_GenCeLi)**""",
