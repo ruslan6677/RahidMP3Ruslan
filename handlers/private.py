@@ -14,7 +14,7 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✅ Add dme to your Group ✅", url=f"https://t.me/LegendMucisRobot?startgroup=true"
+                        "✅ Add me to your Group ✅", url=f"https://t.me/LegendMucisRobot?startgroup=true"
                     )
                 ],
                 [
