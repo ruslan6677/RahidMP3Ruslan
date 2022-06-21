@@ -138,7 +138,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"Assistant ın banını açın\nİstifadəçi adı: @LegendAsistant\nKöməkçi ID: `5342770432` !")
+            f"/unban 5342770432")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
