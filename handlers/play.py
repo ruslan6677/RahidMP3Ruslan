@@ -127,7 +127,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant Account[𝗟 Σ 𝗚 Σ 𝗡 𝗗 ᵃˢⁱˢᵗᵃⁿᵗ] Uğurla Qoşuldu.\n\nİndi Musiqi Başlayır**")
+                        message.chat.id, "**Assistant Account[𝗟 Σ 𝗚 Σ 𝗡 𝗗 ᵃˢⁱˢᵗᵃⁿᵗ](https://t.me/LegendAsistant) Uğurla Qoşuldu.\n\nİndi Musiqi Başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
@@ -232,7 +232,7 @@ async def play(_, message: Message):
         await lel.edit("🔎 **Xaiş Olunur Gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("**Səsli söhbətə daxil oluram...🤩**")
+        await lel.edit("**Səsli söhbətə daxil oluram...✅**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
