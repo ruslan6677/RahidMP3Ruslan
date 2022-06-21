@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://te.legra.ph//file/7da0b633df3bd002a4e5a.jpg",
-                caption=(f"""**👋🏻Salam {message.from_user.mention} 🎵 \n Mənim adım {bot}! \n \n ℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam \n \n ✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin \n \n 🧔🏻Sahibim [𝐆Ξ𝐍𝐂Ξ𝐋𝐈🥃🧊](https://t.me/o2o_GenCeLi)**"""),
+                caption=(f"""**👋🏻Salam {message.from_user.mention} 🎵\nMənim adım {bot}!\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -42,7 +42,7 @@ async def start(_, message: Message):
 
 @Client.on_message(command(["help", f"help@{BOT_USERNAME}"]))
 async def help(_, message: Message):
-      await message.reply_text(" Səsli söhbətdə Musiqi oxuması üçün /play əmrindən istifadə edə bilərsiniz ⤵️ \n \n Məsələn: \n \n 1. `/play Ayaz Babayev - Sən Mənlə` \n 2. `/play https://youtu.be/qLXUa89Q5WI` \n \n /alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər. \n \n ⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
+      await message.reply_text(" Səsli söhbətdə Musiqi oxuması üçün /play əmrindən istifadə edə bilərsiniz ⤵️\n\nMəsələn:\n\n1. `/play Ayaz Babayev - Sən Mənlə`\n2. `/play https://youtu.be/qLXUa89Q5WI`\n\n/alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər.\n\n⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
       reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -65,7 +65,7 @@ async def help(_, message: Message):
 
 @Client.on_callback_query(filters.regex("cbhelp"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(" Səsli söhbətdə Musiqi oxuması üçün /play əmrindən istifadə edə bilərsiniz ⤵️ \n \n Məsələn: \n \n 1. `/play Ayaz Babayev - Sən Mənlə` \n 2. `/play https://youtu.be/qLXUa89Q5WI` \n \n /alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər. \n \n ⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
+    await query.edit_message_text(" Səsli söhbətdə Musiqi oxuması üçün /play əmrindən istifadə edə bilərsiniz ⤵️\n\nMəsələn:\n\n1. `/play Ayaz Babayev - Sən Mənlə`\n2. `/play https://youtu.be/qLXUa89Q5WI`\n\n/alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər.\n\n⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
     reply_markup=InlineKeyboardMarkup(
       [
         [
@@ -126,7 +126,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**👋🏻Salam {query.from_user.mention} 🎵 \n Mənim adım {bot}! \n \n ℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam \n \n ✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin \n \n 🧔🏻Sahibim [𝐆Ξ𝐍𝐂Ξ𝐋𝐈🥃🧊](https://t.me/o2o_GenCeLi)**""",
+    await query.edit_message_text(f"""**👋🏻Salam {query.from_user.mention} 🎵\nMənim adım {bot}!\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
