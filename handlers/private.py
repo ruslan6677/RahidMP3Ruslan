@@ -28,9 +28,6 @@ async def start(_, message: Message):
                 [
                     InlineKeyboardButton(
                         "💡 Əmrlər" , callback_data= "cbhelp"
-                    ),
-                    InlineKeyboardButton(
-                        "🇦🇿Rəsmi Group", url=f"https://t.me/SecretMMC"
                     )
                 ]
                 
@@ -145,9 +142,6 @@ async def cbstart(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton(
                         "💡 Əmrlər", callback_data= "cbhelp"
-                    ),
-                    InlineKeyboardButton(
-                        "🇦🇿Rəsmi Group", url=f"https://t.me/SecretMMC"
                     )
                 ]
                 
