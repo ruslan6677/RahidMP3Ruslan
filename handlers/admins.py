@@ -22,7 +22,7 @@ ACTV_CALLS = []
 async def durdur(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
     a = await message.reply_text("▶️ **🎧 Səsli söhbət dayandırılıb**")
-    await sleep(3)
+    await sleep(15)
     await a.delete()
     
 
@@ -33,7 +33,7 @@ async def durdur(_, message: Message):
 async def devam(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
     a = await message.reply_text("⏸ **🎧 Səsli söhbət dayandırılıb**")
-    await sleep(3)
+    await sleep(15)
     await a.delete()
     
 
