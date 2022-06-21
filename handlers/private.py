@@ -47,10 +47,10 @@ async def help(_, message: Message):
              [
                  [
                      InlineKeyboardButton(
-                         "ℹ️ User Əmrləri", callback_data="herkes")
+                         "ℹ️ Bütün Əmirlərim", callback_data="admin")
                  ],[                     
                      InlineKeyboardButton(
-                         "✅ Admin əmrləri", callback_data="admin")
+                         "✅ Məlumatlarım", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
                          "🔄 Geri Qayıt", callback_data="cbstart")
@@ -74,7 +74,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "✅",callback_data ="herkes")
+            "✅ Məlumatlarım",callback_data ="herkes")
         ],
         [
           InlineKeyboardButton(
@@ -90,7 +90,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""Əᴛʀᴀғʟı\n\nʙᴏᴛ: [ᴍᴜʟᴛɪᴀᴢʙᴏᴛ](https://t.me/LegendMucisRobot)\n\nᴋᴏᴅʟᴀʏᴀɴ: [ɢᴇɴᴄᴇʟɪ](https://t.me/o2o_GenCeLi)\n\nᴅɪʟ: [ᴘʏᴛʜᴏɴ](https://www.python.org\n\nᴋɪᴛᴀʙxᴀɴᴀ: [ᴘʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/\n\nsᴇʀᴠᴇʀ: [ʜᴇʀᴏᴋᴜ](https://heroku.com/)\n\nᴋᴀɴᴀʟ: [ꜱᴇᴄʀᴇᴛᴍᴍᴄ](https://t.me/SecretMMC)\n\n""",
+    await query.edit_message_text(f"""Əᴛʀᴀғʟı\n\nʙᴏᴛ: [ᴍᴜʟᴛɪᴀᴢʙᴏᴛ](https://t.me/LegendMucisRobot)\n\nᴋᴏᴅʟᴀʏᴀɴ: [ɢᴇɴᴄᴇʟɪ](https://t.me/o2o_GenCeLi)\n\nᴅɪʟ: [ᴘʏᴛʜᴏɴ](https://www.python.org\n\nᴋɪᴛᴀʙxᴀɴᴀ: [ᴘʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)\n\nsᴇʀᴠᴇʀ: [ʜᴇʀᴏᴋᴜ](https://heroku.com/)\n\nᴋᴀɴᴀʟ: [ꜱᴇᴄʀᴇᴛᴍᴍᴄ](https://t.me/SecretMMC)\n\n""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
