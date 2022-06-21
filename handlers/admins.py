@@ -21,7 +21,7 @@ ACTV_CALLS = []
 @authorized_users_only
 async def durdur(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
-    a = await message.reply_text("▶️ **🎧 Voicechat Paused by**")
+    a = await message.reply_text("▶️ **🎧 Səsli söhbət dayandırılıb**")
     await sleep(3)
     await a.delete()
     
@@ -32,7 +32,7 @@ async def durdur(_, message: Message):
 @authorized_users_only
 async def devam(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
-    a = await message.reply_text("⏸ **🎧 Voicechat Paused by**")
+    a = await message.reply_text("⏸ **🎧 Səsli söhbət dayandırılıb**")
     await sleep(3)
     await a.delete()
     
@@ -90,7 +90,7 @@ async def atla(_, message: Message):
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
 # Gayet güzel çalışıyor. @Mahoaga Tarafından Eklenmiştir. 
-@Client.on_message(command("ver") & other_filters)
+@Client.on_message(command("yetkiver") & other_filters)
 @authorized_users_only
 async def authenticate(client, message):
     global admins
@@ -106,7 +106,7 @@ async def authenticate(client, message):
         await message.reply("✔ İstifadəçi onsuzda yetkilidir!")
 
 
-@Client.on_message(command("al") & other_filters)
+@Client.on_message(command("yetkial") & other_filters)
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
