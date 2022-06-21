@@ -12,7 +12,7 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✅ Məni öz qrubuna əlavə et ✅", url=f"https://t.me/LegendMucisRobot?startgroup=true"
+                        "✅ M777əni öz qrubuna əlavə et ✅", url=f"https://t.me/LegendMucisRobot?startgroup=true"
                     )
                 ],
                 [
