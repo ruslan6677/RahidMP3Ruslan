@@ -78,7 +78,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""Əᴛʀᴀғʟı\n\nʙᴏᴛ: [ʟᴇɢᴇɴᴅᴍᴜᴄɪꜱ](https://t.me/LegendMucisRobot)\n\nsᴇʀᴠᴇʀ: [ʜᴇʀᴏᴋᴜ](https://heroku.com/)\n\nᴅɪʟ: [ᴘʏᴛʜᴏɴ](https://www.python.org)\n\nᴋɪᴛᴀʙxᴀɴᴀ: [ᴘʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)\n\nᴋᴏᴅʟᴀʏᴀɴ: [ɢᴇɴᴄᴇʟɪ](https://t.me/o2o_GenCeLi)\n\nᴋᴀɴᴀʟ: [ꜱᴇᴄʀᴇᴛᴍᴍᴄ](https://t.me/SecretMMC)\n\n""",
+    await query.edit_message_text(f"""Əᴛʀᴀғʟı\n\nʙᴏᴛ: [ʟᴇɢᴇɴᴅᴍᴜᴄɪꜱ](https://t.me/LegendMucisRobot)\n\nsᴇʀᴠᴇʀ: [ʜᴇʀᴏᴋᴜ](https://heroku.com)\n\nᴅɪʟ: [ᴘʏᴛʜᴏɴ](https://www.python.org)\n\nᴋɪᴛᴀʙxᴀɴᴀ: [ᴘʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)\n\nᴋᴏᴅʟᴀʏᴀɴ: [ɢᴇɴᴄᴇʟɪ](https://t.me/o2o_GenCeLi)\n\nᴋᴀɴᴀʟ: [ꜱᴇᴄʀᴇᴛᴍᴍᴄ](https://t.me/SecretMMC)\n\n""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -92,7 +92,7 @@ async def herkes(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("admin"))
 async def admin(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}! Bu botun hərkəs üçün əmr menyusu 😉\n\n/play - Musiqi oxutmaq üçün youtube url'sinə vəya musiqi dosyasına yanıt verin.▶️\n/song  - İstədiyiniz musiqi sürətli bir şəkildə axtarın.🎵\n/vsong - İstədiyiniz videoları sürətli bir şəkildə axtarın.🔍\n\nBu botun adminlər üçün əmr menyusu ✅\n\n/pause - Musiqini dayandır.⏸️\n/resume - Musiqini dəvam etdir.▶️\n/end - Musiqini Bitir.⏹\n/skip - Musiqini keç.⏩\n/ses - Səsi 0-200 arasi dəyiş\n/reload - Botu yenidən başlad.🔄\n/asistan - Musiqi asistanı qrupunuza qoşulur.⚪\n\nSahiblər Və Sudo Üçün Əmirlər Menyusu\n\n/yetkiver - Yetki ver.🔼\n/yetkial - Yetki al.🔽\n/reklam - Bot Olduğu Butur Qrublarda Reklam Edər\n/restart - Botu Serverdən Yenidən Başlad\n\n </b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}! Bu botun hərkəs üçün əmr menyusu 😉\n\n/play - Musiqi oxutmaq üçün youtube url'sinə vəya musiqi dosyasına yanıt verin.▶️\n/song  - İstədiyiniz musiqi sürətli bir şəkildə axtarın.🎵\n/vsong - İstədiyiniz videoları sürətli bir şəkildə axtarın.🔍\n\nBu botun adminlər üçün əmr menyusu ✅\n\n/pause - Musiqini dayandır.⏸️\n/resume - Musiqini dəvam etdir.▶️\n/end - Musiqini Bitir.⏹\n/skip - Musiqini keç.⏩\n/ses - Səsi 0-200 arasi dəyiş\n/reload - Botu yenidən başlad.🔄\n/asistan - Musiqi asistanı qrupunuza qoşulur.⚪\n\nSahiblər Və Sudo Üçün Əmirlər Menyusu\n\n/yetkiver - Yetki ver.🔼\n/yetkial - Yetki al.🔽\n/reklam - Bot Olduğu Butur Qrublarda Reklam Edər\n/restart - Botu Serverdən Yenidən Başlad\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
