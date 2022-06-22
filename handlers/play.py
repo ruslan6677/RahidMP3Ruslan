@@ -306,7 +306,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎵 Mahnı Adı:** {}\n**🕒 Müddət:** {} min\n**👉 İstəyən:** {}\n\n**✅İndi hal-hazırda `{}`...**".format(
+        caption="**📡 Yayım başladı 💡\n\n💡 Başlıq:** {}\n**🕒 Müddət:** {} min\n**👤 Tələb:** {}\n\n**⏳ Növbəyə əlavə edildi:** {}\n\n**✅İndi hal-hazırda `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
