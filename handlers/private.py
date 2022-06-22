@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("herkes"))
 async def herkes(_, query: CallbackQuery):
-    await query.edit_message_text(f"""Əᴛʀᴀғʟı\n\nʙᴏᴛ: [ʟᴇɢᴇɴᴅᴍᴜᴄɪꜱ](https://t.me/LegendMucisRobot)\n\nsᴇʀᴠᴇʀ: [ʜᴇʀᴏᴋᴜ](https://heroku.com)\n\nᴅɪʟ: [ᴘʏᴛʜᴏɴ](https://www.python.org)\n\nᴋɪᴛᴀʙxᴀɴᴀ: [ᴘʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)\n\nᴋᴏᴅʟᴀʏᴀɴ: [ɢᴇɴᴄᴇʟɪ](https://t.me/o2o_GenCeLi)\n\nᴋᴀɴᴀʟ: [ꜱᴇᴄʀᴇᴛᴍᴍᴄ](https://t.me/SecretMMC)\n\n""",
+    await query.edit_message_text(f"""Əᴛʀᴀғʟı\n\nʙᴏᴛ: [ʟᴇɢᴇɴᴅᴍᴜᴄɪꜱ](https://t.me/LegendMucisRobot)\n\nᴋɪᴛᴀʙxᴀɴᴀ: [ᴘʏʀᴏɢʀᴀᴍ](https://docs.pyrogram.org/)\n\nsᴇʀᴠᴇʀ: [ʜᴇʀᴏᴋᴜ](https://heroku.com)\n\nᴅɪʟ: [ᴘʏᴛʜᴏɴ](https://www.python.org)\n\nᴋᴏᴅʟᴀʏᴀɴ: [ɢᴇɴᴄᴇʟɪ](https://t.me/o2o_GenCeLi)\n\nᴋᴀɴᴀʟ: [ꜱᴇᴄʀᴇᴛᴍᴍᴄ](https://t.me/SecretMMC)\n\n""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
