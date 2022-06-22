@@ -8,8 +8,10 @@ from helpers.filters import command, other_filters2
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
-    await message.reply_text(f"""**👋🏻Salam {message.from_user.mention} 🎵\nMənim adım {bot}!\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**"""),
-         reply_markup=InlineKeyboardMarkup(
+    await message.reply_text(
+      f"""**👋🏻Salam {message.from_user.mention} 🎵\nMənim adım {bot}!\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**"""),
+         reply_markup
+         =InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
