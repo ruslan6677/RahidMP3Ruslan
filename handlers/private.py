@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
     await message.reply_text(
-      f"""**{bot} Sizi Salamlıyır {message.from_user.mention} 👋🏻\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**
+      f"""**[𝗟 Σ 𝗚 Σ 𝗡 𝗗](https://t.me/LegendMucisRobot) Sizi Salamlıyır {message.from_user.mention} 👋🏻\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**
       """,
          reply_markup
          =InlineKeyboardMarkup(
