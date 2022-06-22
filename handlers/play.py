@@ -201,7 +201,7 @@ async def play(_, message: Message):
                 InlineKeyboardButton("🌐 Kömək", url=f"https://t.me/SecretMMC"),
                 InlineKeyboardButton("📣 Kanal", url=f"https://t.me/SecretMMC"),
             ],[
-                InlineKeyboardButton("📲 Menyunu Bağla", callback_data="cls"),
+                InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
         ]
     )
@@ -266,7 +266,7 @@ async def play(_, message: Message):
                 InlineKeyboardButton("🌐 Kömək", url=f"https://t.me/SecretMMC"),
                 InlineKeyboardButton("📣 Kanal", url=f"https://t.me/SecretMMC"),
             ],[
-                InlineKeyboardButton("📲 Menyunu Bağla", callback_data="cls"),
+                InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
         ]
     )
