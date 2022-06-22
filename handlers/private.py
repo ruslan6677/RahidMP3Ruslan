@@ -52,7 +52,7 @@ async def help(_, message: Message):
                          "✅ Məlumatlarım", callback_data="herkes")
                  ],[
                      InlineKeyboardButton(
-                         "🔄 Geri Qayıt", callback_data="cbstart")
+                         "⬅️ Geri Qayıt", callback_data="cbstart")
                  ]
              ]
          )
@@ -74,7 +74,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "🔄 Geri Qayıt", callback_data="cbstart")
+            "⬅️ Geri Qayıt", callback_data="cbstart")
         ]
       ]
      ))
@@ -87,7 +87,7 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "️🔄 Geri Qayıt", callback_data="cbhelp")
+                         "⬅️ Geri Qayıt", callback_data="cbhelp")
                  ] 
              ]
          )
@@ -101,7 +101,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "️🔄 Geri Qayıt", callback_data="cbhelp")
+                         "️⬅️ Geri Qayıt", callback_data="cbhelp")
                      ] 
              ]
          )
