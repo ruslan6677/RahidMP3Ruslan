@@ -43,7 +43,6 @@ async def help(_, message: Message):
                  [
                      InlineKeyboardButton(
                          "ℹ️ Bütün Əmirlərim", callback_data="admin")
-                    ),
                      InlineKeyboardButton(
                          "✅ Məlumatlarım", callback_data="herkes")
                  ],[
