@@ -108,6 +108,11 @@ async def admin(_, query: CallbackQuery):
          )
 
 
+@Client.on_callback_query(filters.regex("alive") & filters.user(Config.SUDO_USERS))
+async def live(_, query: CallbackQuery):
+    await query.edit_message_text('`Mən Əla İşləyirəm 😎`')
+
+
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(f"""**{bot} Sizi Salamlıyır👋🏻\n\nℹ️Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**""",
