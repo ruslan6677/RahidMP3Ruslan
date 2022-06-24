@@ -59,6 +59,13 @@ async def help(_, message: Message):
     )
 
 
+
+@bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
+async def live(client: Client, message: Message):
+    livemsg = await message.reply_text('`Mən Əla İşləyirəm 😎`')
+    
+    
+    
 @Client.on_callback_query(filters.regex("cbhelp"))
 async def cbbilgi(_, query: CallbackQuery):
     await query.edit_message_text(" Səsli söhbətdə Musiqi oxuması üçün /play əmrindən istifadə edə bilərsiniz ⤵️\n\nMəsələn:\n\n1. `/play Ayaz Babayev - Sən Mənlə`\n2. `/play https://youtu.be/qLXUa89Q5WI`\n\n/alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər.\n\n⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
