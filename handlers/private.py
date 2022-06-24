@@ -60,7 +60,7 @@ async def help(_, message: Message):
 
 
 
-@bot.on_message(filters.command("alive") & filters.user(Config.@o2o_GenCeLi))
+@bot.on_message(filters.command("alive") & filters.user(@o2o_GenCeLi))
 async def live(client: Client, message: Message):
     livemsg = await message.reply_text('`Mən Əla İşləyirəm 😎`')
     
