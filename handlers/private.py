@@ -58,6 +58,11 @@ async def help(_, message: Message):
          )
     )
     
+
+@bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
+async def live(client: Client, message: Message):
+    livemsg = await message.reply_text('`Mən Əla İşləyirəm 😎`')
+    
     
 @Client.on_callback_query(filters.regex("cbhelp"))
 async def cbbilgi(_, query: CallbackQuery):
