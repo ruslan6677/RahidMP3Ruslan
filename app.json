@@ -36,6 +36,11 @@
       "description": "Her yerde yönetici olarak sayılan kullanıcı kimliklerinin listesi (Müzik hesabınının id'si).",
       "required": true
     },
+    "BOT_OWNER": {
+      "description": "o2o_GenCeLi",
+      "required": true,
+      "value": "o2o_GenCeLi"
+    },
     "DURATION_LIMIT": {
       "description": "İndirmeler için en fazla ses süresi sınırı (minutes).",
       "required": true,
