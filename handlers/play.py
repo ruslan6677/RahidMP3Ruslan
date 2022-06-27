@@ -261,8 +261,11 @@ async def play(_, message: Message):
             return
 
         keyboard = InlineKeyboardMarkup(
-        [
+                      [
             [
+                InlineKeyboardButton("📣 Rəsmi Kanalı", url=f"https://t.me/SecretMMC"),
+                InlineKeyboardButton("📣 Blog Kanalı", url=f"https://t.me/ElegantBlog"),
+            ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
         ]
