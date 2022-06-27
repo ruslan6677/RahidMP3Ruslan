@@ -196,8 +196,11 @@ async def play(_, message: Message):
                 secmul *= 60
                 
             keyboard = InlineKeyboardMarkup(
-        [
+                      [
             [
+                InlineKeyboardButton("📣 Rəsmi Kanalı", url=f"https://t.me/SecretMMC"),
+                InlineKeyboardButton("📣 Blog Kanalı", url=f"https://t.me/ElegantBlog"),
+            ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
         ]
