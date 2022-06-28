@@ -61,7 +61,7 @@ async def help(_, message: Message):
     
 @Client.on_callback_query(filters.regex("cbhelp"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(" Səsli söhbətdə musiqi oxuması üçün /play əmrindən istifadə edə bilərsiniz ⤵️\n\nMəsələn:\n\n1. `/play Ayaz Babayev - Sən mənlə`\n2. `/play https://youtu.be/qLXUa89Q5WI`\n\n/alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər.\n\n⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
+    await query.edit_message_text(" Səsli söhbətdə musiqi oxuması üçün /play əmrindən istifadə edə bilərsiniz ⤵️\n\nMəsələn:\n\n1. `/play Ayaz Babayev - Sən mənlə`\n2. `/play https://youtu.be/qLXUa89Q5WI`\n\n/alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız bot sahibi istifadə edə bilər.\n\n⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !", 
     reply_markup=InlineKeyboardMarkup(
       [
         [
@@ -110,7 +110,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**{bot} Sizi salamlayır👋🏻\n\nℹ️ Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün /help ərindən istifadə edin**""",
+    await query.edit_message_text(f"""**{bot} Sizi salamlayır👋🏻\n\nℹ️ Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
