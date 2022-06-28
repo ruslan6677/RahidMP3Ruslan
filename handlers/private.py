@@ -115,7 +115,7 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Məni öz qrupuna əlavə et ➕", url=f"https://t.me/LegendMucisRobot?startgroup=true"
+                        "➕ Məni öz qrupuna əlavə et ➕", url=f"https://t.me/Rahid_Music_Bot?startgroup=true"
                     )
                 ],
                 [
