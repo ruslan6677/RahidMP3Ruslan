@@ -55,7 +55,7 @@ async def stop(_, message: Message):
         await callsmusic.pytgcalls.leave_group_call(chat_id)
         await _.send_message(
             message.chat.id,
-            "**🎧 Səsli söhbət bitdi/dayandırıldı!**")
+            "**🎧 Səsli söhbət dayandırıldı!**")
     
 @Client.on_message(command(["skip"]) & other_filters)
 @errors
@@ -66,7 +66,7 @@ async def atla(_, message: Message):
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        a = await message.reply_text("Mahnı keçmək üçün heçnə yoxdu!")
+        a = await message.reply_text("Mahnı keçmək üçün heçnə yoxdu !")
         await sleep(3)
         await a.delete()
     else:
@@ -84,7 +84,7 @@ async def atla(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("➡️ **Sıradaki Mahniya Geçid Edildi.**")
+        a = await message.reply_text("➡️ **Sıradakı mahnı oxunur.**")
         await sleep(3)
         await a.delete()
 
@@ -95,7 +95,7 @@ async def atla(_, message: Message):
 async def authenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("İstifadəçiyə yetki vermək üçün yanıtlayın!")
+        await message.reply("İstifadəçiyə yetki vermək üçün yanıtlayın !")
         return
     if message.reply_to_message.from_user.id not in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
@@ -103,7 +103,7 @@ async def authenticate(client, message):
         admins[message.chat.id] = new_admins
         await message.reply("İstifadəçi yetkili.")
     else:
-        await message.reply("✔ İstifadəçi onsuzda yetkilidir!")
+        await message.reply("✔ İstifadəçi onsuzda yetkilidir !")
 
 
 @Client.on_message(command("yetkial") & other_filters)
@@ -111,7 +111,7 @@ async def authenticate(client, message):
 async def deautenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("✅ Yetkisini almaq üçün mesaj göndərin!")
+        await message.reply("✅ Yetkisini almaq üçün mesaj göndərin !")
         return
     if message.reply_to_message.from_user.id in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
@@ -146,5 +146,5 @@ async def update_admin(client, message):
     admins[message.chat.id] = new_admins
     await client.send_message(
         message.chat.id,
-        "✅ **Bot yenidən başladı!**\n✅ **Admin siyahısı yeniləndi!**"
+        "✅ **Bot yenidən başladı**\n✅ **Admin siyahısı yeniləndi**"
     )
