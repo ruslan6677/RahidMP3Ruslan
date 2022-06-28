@@ -25,15 +25,15 @@
      
     },
     "API_ID": {
-      "description": "my.telegram'dan sayt kimliyi.org/apps",
+      "description": "my.telegram saytda olan API-ID'ni yerləşidirin",
       "required": true
     },
     "API_HASH": {
-      "description": "My.telegram'dan uygulama apı-hash.org/apps",
+      "description": "My.telegram saytda olan API-HASH yerləşdirin",
       "required": true
     },
     "SUDO_USERS": {
-      "description": "Hər yerdə idarəçi sayılan istifadəçi ID-lərinin siyahısı (Musiqi hesabının ID'si).",
+      "description": "Hər yerdə idarəçi sayılan istifadəçi ID-lərinin siyahısı (Musiqi asistan hesabının ID'si).",
       "required": true
     },
     "BOT_OWNER": {
