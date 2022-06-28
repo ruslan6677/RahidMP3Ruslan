@@ -46,7 +46,7 @@ async def help(_, message: Message):
              [
                  [
                      InlineKeyboardButton(
-                         "ℹ️ Bütün Əmrlərim", callback_data="admin")
+                         "ℹ️ Bütün əmrlərim", callback_data="admin")
                  ],[
                      InlineKeyboardButton(
                          "✅ Məlumatlarım", callback_data="hərkəs")
@@ -66,7 +66,7 @@ async def cbbilgi(_, query: CallbackQuery):
       [
         [
           InlineKeyboardButton(
-            "ℹ️ Bütün Əmrlərim", callback_data ="admin")
+            "ℹ️ Bütün əmrlərim", callback_data ="admin")
         ],
         [
           InlineKeyboardButton(
