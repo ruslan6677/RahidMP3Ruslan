@@ -9,14 +9,14 @@ from helpers.filters import command, other_filters2
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
     await message.reply_text(
-      f"""**{bot} Sizi Salamlıyır👋🏻\n\nℹ️Mən səsli söhbətlərdə musiqi oxuya nilən bir botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**
+      f"""**{bot} Sizi Salamlayır👋🏻\n\nℹ️ Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**
       """,
          reply_markup
          =InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Məni öz qrupuna əlavə et ➕", url=f"https://t.me/LegendMucisRobot?startgroup=true"
+                        "➕ Məni öz qrupuna əlavə et ➕", url=f"https://t.me/Rahid_Music_Bot?startgroup=true"
                     )
                 ],
                 [
@@ -110,7 +110,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**{bot} Sizi salamlıyır👋🏻\n\nℹ️Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help ərindən istifadə edin**""",
+    await query.edit_message_text(f"""**{bot} Sizi salamlayır👋🏻\n\nℹ️Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅Botun istifadə qaydasını öyrənmək üçün /help ərindən istifadə edin**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
