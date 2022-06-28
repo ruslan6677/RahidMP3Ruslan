@@ -25,7 +25,7 @@
      
     },
     "API_ID": {
-      "description": "my.telegram saytda olan API-ID'ni yerləşidirin",
+      "description": "my.telegram saytda olan API-ID'ni yerləşdirin",
       "required": true
     },
     "API_HASH": {
