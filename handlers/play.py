@@ -72,13 +72,13 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Hissə Adı: {title}", (255, 255, 255), font=font)
+    draw.text((190, 550), f"Sıraya alınmış mahnının adı: {title}", (255, 255, 255), font=font)
     draw.text(
-        (190, 590), f"Trekin Müddəti: {duration}", (255, 255, 255), font=font
+        (190, 590), f"Sıradakı mahnının müddəti: {duration}", (255, 255, 255), font=font
     )
-    draw.text((190, 630), f"Baxış Sayısı: {views}", (255, 255, 255), font=font)
+    draw.text((190, 630), f"Baxış sayısı: {views}", (255, 255, 255), font=font)
     draw.text((190, 670),
-        f"Əlavə edən: {requested_by}",
+        f"İstəyən: {requested_by}",
         (255, 255, 255),
         font=font,
     )
@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Sorğu emal olunur... Zəhmət olmasa gözləyin!**")
+    lel = await message.reply("🔄 **Sorğu emal olunur... Zəhmət olmasa gözləyin !**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "LegendAsistant"
+        user.first_name = "yalvargelim"
     usar = user
     wew = usar.id
     try:
@@ -127,18 +127,18 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant Account[𝗟 Σ 𝗚 Σ 𝗡 𝗗 ᵃˢⁱˢᵗᵃⁿᵗ](https://t.me/LegendAsistant) Uğurla Qoşuldu.\n\nİndi Musiqi Başlayır**")
+                        message.chat.id, "**Assistant Account[𝙍𝘼𝙃𝙄𝘿 𝙈𝙐𝙎𝙄𝘾 🎸](https://t.me/Rahid_MP3) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"Assistant ın banını açın\nİstifadəçi adı: @LegendAsistant\nKöməkçi ID: `5342770432`")
+                        f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"Assistant ın banını açın\nİstifadəçi adı: @LegendAsistant\nKöməkçi ID: `5342770432`")
+            f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -147,7 +147,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"Bu Mahnının Vaxtı Çox Uzundu {DURATION_LIMIT} dəqiqəlik icazə verilir!"
+                f"Bu mahnının vaxtı çox uzundur😶 {DURATION_LIMIT} dəqiqəlik icazə verilir!"
             )
 
         file_name = get_file_name(audio)
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("📣 Rəsmi Kanalı", url=f"https://t.me/SecretMMC"),
-                InlineKeyboardButton("📣 Blog Kanalı", url=f"https://t.me/ElegantBlog"),
+                InlineKeyboardButton("📢 Rəsmi kanal", url=f"https://t.me/Rahid_44"),
+                InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
@@ -221,15 +221,15 @@ async def play(_, message: Message):
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"Bu Mahnının Vaxtı Çox Uzundu {DURATION_LIMIT} dəqiqəlik icazə verilir!")
+             await lel.edit(f"Bu Mahnının vaxtı çox uzundur😶 {DURATION_LIMIT} dəqiqəlik icazə verilir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("**Hansı Mahnıya Qulaq Asmaq İstiyirsinizsə /play Mahnı Adı ?**")
-        await lel.edit("🔎 **Xaiş Olunur Gözləyin...**")
+            return await lel.edit("**Hansı mahnı dinləmək istəyirsinizsə /play Mahnı adı yazın**")
+        await lel.edit("🔎 **Xahiş olunur gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
         await lel.edit("**Səsli söhbətə daxil oluram...✅**")
@@ -255,7 +255,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "Mahnı tapılmadı🙁\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil✅"
+                "Mahnı tapılmadı🙁\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil😐"
             )
             print(str(e))
             return
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("📣 Rəsmi Kanalı", url=f"https://t.me/SecretMMC"),
-                InlineKeyboardButton("📣 Blog Kanalı", url=f"https://t.me/ElegantBlog"),
+                InlineKeyboardButton("📢 Rəsmi Kanal", url=f"https://t.me/Rahid_MP3"),
+                InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
@@ -272,7 +272,7 @@ async def play(_, message: Message):
     )
         
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"Bu Mahnının Vaxtı Çox Uzundu {DURATION_LIMIT} dəqiqəlik icazə verilir!")
+             await lel.edit(f"Bu mahnının vaxtı çox uzundur😶 {DURATION_LIMIT} dəqiqəlik icazə verilir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
@@ -286,7 +286,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**📡 Yayım başladı 💡\n\n💡 Başlıq:** {}\n**🕒 Müddət:** {} min\n**👤 Tələb:** {}\n\n**⏳ Növbəyə əlavə edildi:** {}".format(
+        caption="**📡 Yayım başladı 💡\n\n💡 Başlıq:** {}\n**🕒 Müddət:** {} min\n**👤 Tələb edən:** {}\n\n**⏳ Növbəyə əlavə edildi:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -306,7 +306,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**📡 Yayım başladı 💡\n\n💡 Başlıq:** {}\n**🕒 Müddət:** {} min\n**👤 Tələb:** {}**\n\n**✅İndi hal-hazırda `{}`...**".format(
+        caption="**📡 Yayım başladı 💡\n\n💡 Başlıq:** {}\n**🕒 Müddət:** {} min\n**👤 Tələb:** {}**\n\n**✅ İndi hal-hazırda `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
