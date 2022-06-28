@@ -1,31 +1,31 @@
 {
-  "name": "Efsane Music",
-  "description": "Telegram'ınızın Grup Sesli Sohbeti'nde şarkı çalmak için Açık Kaynaklı bot. Powered by Mehmetbaba55.",
+  "name": "Rahid Music 🎸",
+  "description": "Telegram qrup səs çatında mahnıları səsləndirmək üçün açıq mənbə botu. Powered by Rahid.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Mehmetbaba55/EfsaneMusic",
+  "repository": "https://github.com/Rahid2003/RahidMP3",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram oturum dizesi (Replit.com)",
+      "description": "Pyrogram session'u yapışdır (Replit.com)",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "Bir bot belirteci @botfather ile alınız",
+      "description": "Bot token telegram @botfather-dan alın",
       "required": true
     },
     "BOT_NAME": {
-      "description": "Müzik Oynatıcı Bot Adınız.",
+      "description": "Musiqi botun adı yazın.",
       "required": false,
       "value": ""
     },
     "BOT_USARNAME": {
-      "description": "Müzik Oynatıcı Bot Kullanıcı İsmi @ olmadan yazınız.",
+      "description": "Musiqi botun istifadəçi adı @ olmadan yazın.",
       "required": true,
       "value": ""
      
     },
     "API_ID": {
-      "description": "my.telegram'dan uygulama kimliği.org/apps",
+      "description": "my.telegram'dan sayt kimliyi.org/apps",
       "required": true
     },
     "API_HASH": {
@@ -33,16 +33,16 @@
       "required": true
     },
     "SUDO_USERS": {
-      "description": "Her yerde yönetici olarak sayılan kullanıcı kimliklerinin listesi (Müzik hesabınının id'si).",
+      "description": "Hər yerdə idarəçi sayılan istifadəçi ID-lərinin siyahısı (Musiqi hesabının ID'si).",
       "required": true
     },
     "BOT_OWNER": {
-      "description": "o2o_GenCeLi",
+      "description": "yalvargelim",
       "required": true,
-      "value": "o2o_GenCeLi"
+      "value": "yalvargelim"
     },
     "DURATION_LIMIT": {
-      "description": "İndirmeler için en fazla ses süresi sınırı (minutes).",
+      "description": "Yükləmələr üçün maksimum audio vaxt limiti (dəqiqə).",
       "required": true,
       "value": "55"
     }
