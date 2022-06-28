@@ -6,7 +6,7 @@
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram session'u yapışdır (Replit.com)",
+      "description": "Pyrogram session'u yerləşdirin (Replit.com)",
       "required": true
     },
     "BOT_TOKEN": {
