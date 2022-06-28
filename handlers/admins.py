@@ -32,7 +32,7 @@ async def durdur(_, message: Message):
 @authorized_users_only
 async def devam(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
-    a = await message.reply_text("⏸ **🎧 Səsli söhbət dayandırılıb**")
+    a = await message.reply_text("⏸ **🎧 Səsli musiqi dayandırılıb**")
     await sleep(3)
     await a.delete()
     
@@ -55,7 +55,7 @@ async def stop(_, message: Message):
         await callsmusic.pytgcalls.leave_group_call(chat_id)
         await _.send_message(
             message.chat.id,
-            "**🎧 Səsli söhbət dayandırıldı!**")
+            "**🎧 Səsli musiqi dayandırıldı!**")
     
 @Client.on_message(command(["skip"]) & other_filters)
 @errors
