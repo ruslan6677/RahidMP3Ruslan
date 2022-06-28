@@ -39,7 +39,6 @@
     "BOT_OWNER": {
       "description": "Öz ID'nizi yazın",
       "required": true,
-      "value": "yalvargelim"
     },
     "DURATION_LIMIT": {
       "description": "Yükləmələr üçün maksimum audio vaxt limiti (dəqiqə).",
