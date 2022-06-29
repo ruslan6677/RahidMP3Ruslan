@@ -228,7 +228,7 @@ async def play(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("**Hansı mahnı dinləmək istəyirsinizsə /play Mahnı adı yazın**")
+            return await lel.edit("**Hansı mahnı dinləmək istəyirsinizsə /play mahnı adı yazın**")
         await lel.edit("🔎 **Xahiş olunur gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
