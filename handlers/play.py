@@ -127,18 +127,18 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant Account[𝙍𝘼𝙃𝙄𝘿 𝙈𝙐𝙎𝙄𝘾 🎸](https://t.me/Rahid_MP3) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
+                        message.chat.id, "**Assistant Account[𝐻𝒆𝒍𝒍 𝑸𝒖𝒆𝒆𝒏](https://t.me/Queenn_nnnnn) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
+                        f"Assistantın banını açın\nİstifadəçi adı: @Queenn_nnnnn\nKöməkçi ID: `5549648197`")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
+            f"Assistantın banını açın\nİstifadəçi adı: @Queenn_nnnnn\nKöməkçi ID: `5549648197`")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -199,7 +199,7 @@ async def play(_, message: Message):
                       [
             [
                 InlineKeyboardButton("📢 Rəsmi kanal", url=f"https://t.me/Rahid_44"),
-                InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
+                InlineKeyboardButton("💬 Söhbət Qrupum", url=f"https://t.me/gecepayizi"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
@@ -264,7 +264,7 @@ async def play(_, message: Message):
                       [
             [
                 InlineKeyboardButton("📢 Rəsmi Kanal", url=f"https://t.me/Rahid_44"),
-                InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
+                InlineKeyboardButton("💬 Söhbət Qrupum", url=f"https://t.me/gecepayizi"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
