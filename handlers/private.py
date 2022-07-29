@@ -9,7 +9,7 @@ from helpers.filters import command, other_filters2
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
     await message.reply_text(
-      f"""**{bot} Sizi Salamlayır👋🏻\n\nℹ️ Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**
+      f"""**{bot} Sizi Salamlayır👋🏻\n\nℹ️ Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin\n\n● Mən səsli söhbətlərdə musiqi botam 🥰\n\n● Hər hansı problemlə qarşılaşsanız @Rahid_Support qrupumuza gəlib bildirə bilərsiniz!\n\n● Musiqi yükləmək üçün digər botumuz: @Rahid_MusicBot\n\n● Rəsmi: @Rahid_44**
       """,
          reply_markup
          =InlineKeyboardMarkup(
@@ -110,7 +110,7 @@ async def admin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**{bot} Sizi Salamlayır👋🏻\n\nℹ️ Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin**""",
+    await query.edit_message_text(f"""**{bot} Sizi Salamlayır👋🏻\n\nℹ️ Mən səsli söhbətlərdə musiqi oxuya bilən bir botam\n\n✅ Botun istifadə qaydasını öyrənmək üçün /help əmrindən istifadə edin\n\n● Mən səsli söhbətlərdə musiqi botam 🥰\n\n● Hər hansı problemlə qarşılaşsanız @Rahid_Support qrupumuza gəlib bildirə bilərsiniz!\n\n● Musiqi yükləmək üçün digər botumuz: @Rahid_MusicBot\n\n● Rəsmi: @Rahid_44**""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
