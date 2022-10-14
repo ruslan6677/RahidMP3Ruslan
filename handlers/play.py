@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Mahnı axtarıram... Zəhmət olmasa gözləyin !**")
+    lel = await message.reply("🔍 **Mahnı axtarıram... Zəhmət olmasa gözləyin !**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -127,7 +127,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant Account[𝙍𝘼𝙃𝙄𝘿 𝙈𝙐𝙎𝙄𝘾 🎸](https://t.me/Rahid_MP3) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
+                        message.chat.id, "**Assistant [𝙍𝘼𝙃𝙄𝘿 𝙈𝙐𝙎𝙄𝘾 🎸](https://t.me/Rahid_MP3) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
@@ -161,7 +161,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="✨ Bağla",
+                        text="🗑️ Bağla",
                         callback_data="cls")
                    
                 ]
@@ -198,7 +198,7 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("✅ Digər Botlar", url=f"https://t.me/Rahid_44"),
+                InlineKeyboardButton("🤖 Digər Botlar", url=f"https://t.me/Rahid_44"),
                 InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
@@ -255,7 +255,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "Mahnı tapılmadı🙁\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil😐"
+                "❌ Mahnı tapılmadı\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil ‼️"
             )
             print(str(e))
             return
@@ -263,7 +263,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("✅ Digər Botlar", url=f"https://t.me/Rahid_44"),
+                InlineKeyboardButton("🤖 Digər Botlar", url=f"https://t.me/Rahid_44"),
                 InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
@@ -286,7 +286,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**📡 Yayım başladı 💡\n\n💡 Başlıq:** {}\n**🕒 Müddət:** {} min\n**👤 İstəyən:** {}\n\n**⏳ Mahnı növbəyə əlavə edildi:** {}".format(
+        caption="**▶️ Səsdə oxunur...\n\n🎵 Başlıq:** {}\n**🕒 Müddət:** {}\n**👤 İstəyən:** {}\n\n**⏭️ Növbə:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -306,7 +306,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**📡 Yayım başladı 💡\n\n💡 Başlıq:** {}\n**🕒 Müddət:** {} min\n**👤 İstəyən:** {}**\n\n**✅ İndi hal-hazırda `{}`...**".format(
+        caption="**▶️ Səsdə oxunur...\n\n🎵 Başlıq:** {}\n**🕒 Müddət:** {}\n**👤 İstəyən:** {}**\n\n**💬 İndi hal-hazırda `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
