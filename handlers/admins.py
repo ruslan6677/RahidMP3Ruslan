@@ -84,7 +84,7 @@ async def atla(_, message: Message):
                 ),
             )
             
-        a = await message.reply_text("➡️ **Sıradakı mahnı oxunur.**")
+        a = await message.reply_text("➡️ **Növbədəki mahnı oxunur**")
         await sleep(3)
         await a.delete()
 
