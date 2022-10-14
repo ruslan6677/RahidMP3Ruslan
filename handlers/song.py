@@ -27,7 +27,7 @@ def bul(client, message):
 
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
-    m = message.reply("🔍 `Musiqi axtarılır, Zəhmət olmasa gözləyin...`")
+    m = message.reply("🔎 Mahnı axtarıram...")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=5).to_dict()
@@ -45,17 +45,17 @@ def bul(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ `Musiqi tapılmadı`"
+            "❌ Mahnı tapılmadı.\n\nBaşqa mahnı yazın, və ya mahnı adı düzgün deyil."
         )
         print(str(e))
         return
-    m.edit("🔍 `Musiqi axtarılır, Zəhmət olmasa gözləyin...`")
+    m.edit("`Mahnı yüklənir, zəhmət olmasa gözləyin...⏱`")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"🎵 **Başlıq**: [{title[:35]}]({link})\n🎬 **Mənbə**: YouTube\n⏱️ **Müddət**: `{duration}`\n👁‍🗨 **Baxış Sayı**: `{views}`\n🎵 **Musiqi Kanalı**: @RahidMusic"
+        rep = f"🎵 **Başlıq**: [{title[:35]}]({link})\n🎬 **Mənbə**: YouTube\n⏱️ **Müddət**: `{duration}`\n👁‍🗨 **Baxış sayı**: `{views}`\n🎵 **Musiqi Kanalı**: @RahidMusic"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -107,14 +107,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("🔍 `Video axtarılır, Zəhmət olmasa gözləyin...`")
+        msg = await message.reply("📥 **Video yüklənir...**")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
         return await msg.edit(f"🚫 **Xəta:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("🔍 `Video axtarılır, Zəhmət olmasa gözləyin...`")
+    await msg.edit("📥 **Video yüklənir...**")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
