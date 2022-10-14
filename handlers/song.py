@@ -27,7 +27,7 @@ def bul(client, message):
 
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
-    m = message.reply("🔍 Mahnı axtarıram...")
+    m = message.reply("🔍 `Musiqi axtarılır, Zəhmət olmasa gözləyin...`")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=5).to_dict()
@@ -45,11 +45,11 @@ def bul(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Mahnı tapılmadı.\n\nBaşqa mahnı yazın, və ya mahnı adı düzgün deyil ‼️"
+            "❌ `Musiqi tapılmadı`"
         )
         print(str(e))
         return
-    m.edit("`Mahnı yüklənir, zəhmət olmasa gözləyin...⏱`")
+    m.edit("🔍 `Musiqi axtarılır, Zəhmət olmasa gözləyin...`")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -107,14 +107,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **Video yüklənir...**")
+        msg = await message.reply("🔍 `Video axtarılır, Zəhmət olmasa gözləyin...`")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
         return await msg.edit(f"🚫 **Xəta:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("📥 **Video yüklənir...**")
+    await msg.edit("🔍 `Video axtarılır, Zəhmət olmasa gözləyin...`")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
