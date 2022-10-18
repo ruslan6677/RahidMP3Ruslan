@@ -103,7 +103,7 @@ async def authenticate(client, message):
         admins[message.chat.id] = new_admins
         await message.reply("İstifadəçi yetkili.")
     else:
-        await message.reply("✔ İstifadəçi onsuzda yetkilidir !")
+        await message.reply("✔ İstifadəçiyə yetki verildi")
 
 
 @Client.on_message(command("yetkial") & other_filters)
@@ -119,7 +119,7 @@ async def deautenticate(client, message):
         admins[message.chat.id] = new_admins
         await message.reply("İstifadəçi yetkisiz")
     else:
-        await message.reply("✅ yetkisi alındı!")
+        await message.reply("✅ yetkisi alındı")
 
 
 # Sesli sohbet için 0-200 arası yeni komut eklenmiş oldu. 
