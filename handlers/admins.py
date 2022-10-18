@@ -117,7 +117,7 @@ async def deautenticate(client, message):
         new_admins = admins[message.chat.id]
         new_admins.remove(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
-        await message.reply("İstifadəçi yetkisiz")
+        await message.reply("✅ İstifadəçi yetksi alındı")
     else:
         await message.reply("✅ yetkisi alındı")
 
