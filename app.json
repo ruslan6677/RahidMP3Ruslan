@@ -16,12 +16,12 @@
     "BOT_NAME": {
       "description": "Musiqi botun adı yazın.",
       "required": false,
-      "value": ""
+      "value": "𝙍𝘼𝙃𝙄𝘿 𝙈𝙐𝙎𝙄𝘾 🎸"
     },
     "BOT_USARNAME": {
       "description": "Musiqi botun istifadəçi adı @ olmadan yazın.",
       "required": true,
-      "value": ""
+      "value": "Rahid_Music_Bot"
      
     },
     "API_ID": {
