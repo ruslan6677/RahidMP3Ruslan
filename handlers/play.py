@@ -127,18 +127,18 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant [𝑆𝐸𝑉𝐺𝐼 𝑀𝑈𝑆𝐼𝐶 🎵](https://t.me/Sevgi_Asistant) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
+                        message.chat.id, "**Assistant [𝙍𝘼𝙃𝙄𝘿 𝙈𝙐𝙎𝙄𝘾 🎸](https://t.me/Rahid_MP3) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"Assistantın banını açın\nİstifadəçi adı: @Sevgi_Asistant\nKöməkçi ID: `5624270308`")
+                        f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"Assistantın banını açın\nİstifadəçi adı: @Sevgi_Asistant\nKöməkçi ID: `5624270308`")
+            f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("✅ Qrupa Əlavə Et", url=f"https://t.me/Sevgi_Music_Bot?startgroup=a"),
-                InlineKeyboardButton("💬 Qrup", url=f"https://t.me/sonbadee"),
+                InlineKeyboardButton("✅ Qrupa Əlavə Et", url=f"https://t.me/Rahid_Music_Bot?startgroup=a"),
+                InlineKeyboardButton("🤖 Rəsmi", url=f"https://t.me/Rahid_44"),
             ],[
                 InlineKeyboardButton("🗑️ Bağla", callback_data="cls"),
             ],
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("✅ Qrupa Əlavə Et", url=f"https://t.me/Sevgi_Music_Bot?startgroup=a"),
-                InlineKeyboardButton("💬 Qrup", url=f"https://t.me/sonbadee"),
+                InlineKeyboardButton("✅ Qrupa Əlavə Et", url=f"https://t.me/Rahid_Music_Bot?startgroup=a"),
+                InlineKeyboardButton("🤖 Rəsmi", url=f"https://t.me/Rahid_44"),
             ],[
                 InlineKeyboardButton("🗑️ Bağla", callback_data="cls"),
             ],
