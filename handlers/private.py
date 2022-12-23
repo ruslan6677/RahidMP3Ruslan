@@ -16,15 +16,15 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Qrupa Əlavə Et ➕", url=f"https://t.me/Rahid_Music_Bot?startgroup=true"
+                        "➕ Qrupa Əlavə Et ➕", url=f"https://t.me/DarkSongbot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🙇🏻 Sahibim", url="https://t.me/Rahid_2003"
+                        "🙇🏻 Sahibim", url="https://t.me/ordayam_5_deqiqeye"
                     ),
                     InlineKeyboardButton(
-                        "🌐 Digər Botlar", url="https://t.me/Rahid_44"
+                        "🌐 Oyun Qurubu", url="https://t.me/TheBorzmaf"
                     )
                 ],
                 [
@@ -115,15 +115,15 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Qrupa Əlavə Et ➕", url=f"https://t.me/Rahid_Music_Bot?startgroup=true"
+                        "➕ Qrupa Əlavə Et ➕", url=f"https://t.me/DarkSongbot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🙇🏻 Sahibim", url="https://t.me/Rahid_2003"
+                        "🙇🏻 Sahibim", url="https://t.me/ordayam_5_deqiqeye"
                     ),
                     InlineKeyboardButton(
-                        "🌐 Digər Botlar", url="https://t.me/Rahid_44"
+                        "🌐 Oyun Qurubu", url="https://t.me/TheBorzMaf"
                     )
                 ],
                 [
